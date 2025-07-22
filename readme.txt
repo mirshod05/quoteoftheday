@@ -1,1 +1,1 @@
-This bot uses zenquote public API and returns a random quote and its author when prompted to. I hosted this telegram bot program using the free-tier of pythonanywhere.com. This bot is intermittently active.
+This bot uses zenquote public API and returns a random quote and its author when prompted to. I hosted this telegram bot program using the free-tier of pythonanywhere.com. This bot is intermittently active. You can view the bot here: https://t.me/qotd101_bot
