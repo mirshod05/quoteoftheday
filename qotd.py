@@ -1,6 +1,7 @@
 import requests
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+import os
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.effective_chat.id
@@ -17,7 +18,7 @@ async def quote(update: Update, context: ContextTypes.DEFAULT_TYPE):
     quote_text = get_quote()
     await update.message.reply_text(quote_text)
 
-BOT_TOKEN = "7805511089:AAEfC2E8sW_l-hj5gkt7aPSthSlOnXzPPR4"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 app = ApplicationBuilder().token(BOT_TOKEN).build()
 app.add_handler(CommandHandler("start",start))
 app.add_handler(CommandHandler("quote",quote))
